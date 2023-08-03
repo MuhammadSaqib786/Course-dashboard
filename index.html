@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+  <title>Course Designer App</title>
+  <style>
+    .sidebar {
+      background-color: #3B3C36;
+      color: white; /* White text color for the left menu links */
+    }
+    .navbar {
+      background-color: #222222;
+    }
+    .navbar-brand {
+      color: #FFDA6B; /* Custom text color for the title */
+    }
+    .nav-item {
+  margin-bottom: 15px; /* Adjusts the vertical distance between items */
+}
+
+.nav-item i {
+  font-size: 20px; /* Makes the icons bigger */
+}
+.greeting {
+  font-family: 'Georgia', serif; /* A more elegant font */
+  font-size: 34px; /* Increase font size */
+  color: #3B3C36; /* A color that matches the theme */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+}
+.name-highlight {
+  font-weight: bold; /* Makes the name bolder */
+}
+.main-container {
+  margin: 0 auto;
+  max-width: 80%;
+}
+.nav-selected {
+  background-color: #222222; /* Dark background for the selected item */
+  color: #FFDA6B; /* Matching text color for the selected item */
+}
+#calendar {
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fc-toolbar h2 {
+  font-family: 'Georgia', serif;
+  font-size: 24px;
+  color: #3B3C36;
+}
+
+.fc-day-header {
+  background: #3B3C36;
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+}
+
+
+    /* Add your additional styling here */
+  </style>
+</head>
+<body>
+  <div class="main-container">
+  <nav class="navbar navbar-dark">
+    <span class="navbar-brand">Course Designer App</span>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link text-white nav-selected" href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-inbox"></i> Inbox</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-chalkboard-teacher"></i> Class</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-user-graduate"></i> Students</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-file-alt"></i> Tests</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-folder"></i> Files</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-cogs"></i> Settings</a></li>
+          </ul>
+        </div>
+        
+      </nav>
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <h2 class="greeting">Good Morning <span class="name-highlight">Ms. Sidra Tahir</span></h2>
+        <div class="row">
+          <div class="col-md-8">
+            <h3>Submitted Tests
+              <select class="custom-select" style="width:80px; margin-left: 100px;">
+                <option value="5">5th</option>
+                <option value="6">6th</option>
+                <!-- Add other classes here -->
+              </select>
+            </h3>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Date of Submission</th>
+                  <th>Status</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Existing rows -->
+                <tr>
+                  <td>Ahmed Khan</td>
+                  <td>2023-07-01</td>
+                  <td><span style="color:purple;">Active</span></td>
+                  <td><a href="#" style="color:blue;"><i class="fas fa-download"></i> Download</a></td>
+                  <td><a href="#" style="color:green;"><i class="fas fa-eye"></i> View</a></td>
+                </tr>
+                <tr>
+                  <td>Fatima Ali</td>
+                  <td>2023-06-25</td>
+                  <td><span style="color:orange;">Opened</span></td>
+                  <td><a href="#" style="color:blue;"><i class="fas fa-download"></i> Download</a></td>
+                  <td><a href="#" style="color:green;"><i class="fas fa-eye"></i> View</a></td>
+                </tr>
+                <tr>
+                  <td>Usman Malik</td>
+                  <td>2023-06-20</td>
+                  <td><span style="color:red;">Completed</span></td>
+                  <td><a href="#" style="color:blue;"><i class="fas fa-download"></i> Download</a></td>
+                  <td><a href="#" style="color:green;"><i class="fas fa-eye"></i> View</a></td>
+                </tr>
+                <!-- New rows -->
+                <tr>
+                  <td>Maryam Iqbal</td>
+                  <td>2023-06-18</td>
+                  <td><span style="color:purple;">Active</span></td>
+                  <td><a href="#" style="color:blue;"><i class="fas fa-download"></i> Download</a></td>
+                  <td><a href="#" style="color:green;"><i class="fas fa-eye"></i> View</a></td>
+                </tr>
+                <tr>
+                  <td>Imran Hussain</td>
+                  <td>2023-06-15</td>
+                  <td><span style="color:orange;">Opened</span></td>
+                  <td><a href="#" style="color:blue;"><i class="fas fa-download"></i> Download</a></td>
+                  <td><a href="#" style="color:green;"><i class="fas fa-eye"></i> View</a></td>
+                </tr>
+              </tbody>
+            </table>
+            
+          </div>
+          <div class="col-md-4">
+            <div id="calendar"></div> <!-- This is where the FullCalendar will be rendered -->
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#calendar').fullCalendar({
+      defaultDate: moment().toDate(), // Sets the default date to the current date
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+    });
+  });
+</script>
+
+</body>
+</div>
+</html>
