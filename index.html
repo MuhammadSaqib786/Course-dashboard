@@ -81,22 +81,21 @@
       <nav class="col-md-2 d-none d-md-block sidebar">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
-            <li class="nav-item" style="margin-top: 20px;"><a class="nav-link text-white nav-selected" href="#"><i class="fas fa-home"></i> Home</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-inbox"></i> Inbox</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-chalkboard-teacher"></i> Class</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-user-graduate"></i> Students</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-file-alt"></i> Tests</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-folder"></i> Files</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-cogs"></i> Settings</a></li>
+            <li class="nav-item" style="margin-top: 20px;"><a class="nav-link text-white " href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white nav-selected" href="#"><i class="fas fa-folder-open"></i> My Course Folder</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-cogs"></i> Preferences</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-tools"></i> Setting</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-history"></i> Search History</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
           </ul>
         </div>
-        
       </nav>
+      
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <h2 class="greeting">Good Morning <span class="name-highlight">Ms. Sidra Tahir</span></h2>
+        <h2 class="greeting">Good Morning <span class="name-highlight"> User 1</span></h2>
         <div class="row">
           <div class="col-md-8">
-            <h3>Submitted Tests
+            <h3>My Course Folder
               <select class="custom-select" style="width:100px; margin-left: 100px;">
                 <option value="5">BSCS</option>
                 <option value="6">BSIT</option>
@@ -106,50 +105,72 @@
             <table class="table table-bordered">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Date of Submission</th>
+                  <th>Topic</th>
                   <th>Status</th>
+                  <th>Action</th>
                   <th></th>
-                  <th></th>
+                  
                 </tr>
               </thead>
               <tbody>
                 <!-- Existing rows -->
                 <tr>
-                  <td>Ahmed Khan</td>
-                  <td>2023-07-01</td>
-                  <td><span style="color:purple;">Active</span></td>
-                  <td><a href="#" style="color:blue;"><i class="fas fa-download"></i> Download</a></td>
-                  <td><a href="#" style="color:green;"><i class="fas fa-eye"></i> View</a></td>
+                  <td>Introduction</td>
+                  
+                  <td><span style="color: blue;">Saved</span></td>
+                  <td><a href="#" style="color: red;"> Open</a></td>
+                  <td>
+                    <a href="#" style="color:blue;"><i class="fas fa-share-alt"></i></a>
+                    <a href="#" style="color:green; margin-left:10px;"><i class="fas fa-eye"></i></a>
+                    <a href="#" style="color:orange; margin-left:10px;"><i class="fas fa-edit"></i></a>
+                  </td>
+                  
                 </tr>
                 <tr>
-                  <td>Fatima Ali</td>
-                  <td>2023-06-25</td>
-                  <td><span style="color:orange;">Opened</span></td>
-                  <td><a href="#" style="color:blue;"><i class="fas fa-download"></i> Download</a></td>
-                  <td><a href="#" style="color:green;"><i class="fas fa-eye"></i> View</a></td>
+                  <td>Arrays</td>
+                  
+                  <td><span style="color:green;">Viewed</span></td>
+                  <td><a href="#" style="color: black;"> Download</a></td>
+                  <td>
+                    <a href="#" style="color:blue;"><i class="fas fa-share-alt"></i></a>
+                    <a href="#" style="color:green; margin-left:10px;"><i class="fas fa-eye"></i></a>
+                    <a href="#" style="color:orange; margin-left:10px;"><i class="fas fa-edit"></i></a>
+                  </td>
+                  
                 </tr>
                 <tr>
-                  <td>Usman Malik</td>
-                  <td>2023-06-20</td>
-                  <td><span style="color:red;">Completed</span></td>
-                  <td><a href="#" style="color:blue;"><i class="fas fa-download"></i> Download</a></td>
-                  <td><a href="#" style="color:green;"><i class="fas fa-eye"></i> View</a></td>
+                  <td>Complexity</td>
+                  <td><span style="color: blue;">Saved</span></td>
+                  <td><a href="#" style="color: red;"> Open</a></td>
+                  <td>
+                    <a href="#" style="color:blue;"><i class="fas fa-share-alt"></i></a>
+                    <a href="#" style="color:green; margin-left:10px;"><i class="fas fa-eye"></i></a>
+                    <a href="#" style="color:orange; margin-left:10px;"><i class="fas fa-edit"></i></a>
+                  </td>
+                  
                 </tr>
                 <!-- New rows -->
                 <tr>
-                  <td>Maryam Iqbal</td>
-                  <td>2023-06-18</td>
-                  <td><span style="color:purple;">Active</span></td>
-                  <td><a href="#" style="color:blue;"><i class="fas fa-download"></i> Download</a></td>
-                  <td><a href="#" style="color:green;"><i class="fas fa-eye"></i> View</a></td>
+                  <td>Sorting</td>
+                  <td><span style="color:green;">Viewed</span></td>
+                  <td><a href="#" style="color: black;"> Download</a></td>
+                  <td>
+                    <a href="#" style="color:blue;"><i class="fas fa-share-alt"></i></a>
+                    <a href="#" style="color:green; margin-left:10px;"><i class="fas fa-eye"></i></a>
+                    <a href="#" style="color:orange; margin-left:10px;"><i class="fas fa-edit"></i></a>
+                  </td>
+                  
                 </tr>
                 <tr>
-                  <td>Imran Hussain</td>
-                  <td>2023-06-15</td>
-                  <td><span style="color:orange;">Opened</span></td>
-                  <td><a href="#" style="color:blue;"><i class="fas fa-download"></i> Download</a></td>
-                  <td><a href="#" style="color:green;"><i class="fas fa-eye"></i> View</a></td>
+                  <td>List</td>
+                  <td><span style="color: blue;">Saved</span></td>
+                  <td><a href="#" style="color: red;"> Open</a></td>
+                  <td>
+                    <a href="#" style="color:blue;"><i class="fas fa-share-alt"></i></a>
+                    <a href="#" style="color:green; margin-left:10px;"><i class="fas fa-eye"></i></a>
+                    <a href="#" style="color:orange; margin-left:10px;"><i class="fas fa-edit"></i></a>
+                  </td>
+                  
                 </tr>
               </tbody>
             </table>
